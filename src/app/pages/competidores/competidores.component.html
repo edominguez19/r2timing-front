@@ -1,0 +1,56 @@
+
+<div class="row"><h1>Participantes</h1></div>
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div class="table-container var-elevation-z8 contenedor">
+            <table #hASort="matSort" matSort class="table table-sm table-striped table-bordered" mat-table [dataSource]="datasource">
+                <ng-container matColumnDef="nombre">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Nombres
+                    </th>
+                    <td *matCellDef="let element">{{element.nombres}}</td>
+                </ng-container>
+                <ng-container matColumnDef="apellido">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Apellidos
+                    </th>
+                    <td *matCellDef="let element">{{element.apellidos}}</td>
+                </ng-container>
+                <ng-container matColumnDef="ci">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Cédula
+                    </th>
+                    <td *matCellDef="let element">{{element.ci}}</td>
+                </ng-container>
+                <ng-container matColumnDef="fechaNacimiento">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Fecha Nacimiento
+                    </th>
+                    <td *matCellDef="let element">{{element.fechaNacimiento}}</td>
+                </ng-container>
+                <ng-container matColumnDef="ciudad">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Ciudad
+                    </th>
+                    <td *matCellDef="let element">{{element.ciudad}}</td>
+                </ng-container>
+                <ng-container matColumnDef="email">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Email
+                    </th>
+                    <td *matCellDef="let element">{{element.email}}</td>
+                </ng-container>
+                <ng-container matColumnDef="telefono">
+                    <th *matHeaderCellDef mat-sort-header>
+                        Teléfono
+                    </th>
+                    <td *matCellDef="let element">{{element.telefono}}</td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+                <tr mat-row *matRowDef="let row; columns:displayedColumn;"></tr>
+            </table>
+            <mat-paginator #paginator [pageSizeOptions]="[10,20,50]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>
+<button mat-raised-button color="primary" (click)="nuevoParticipante()">Nuevo</button>

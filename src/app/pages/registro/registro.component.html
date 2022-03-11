@@ -1,0 +1,63 @@
+<form [formGroup]="parametroForm" (ngSubmit)="onSubmit()">
+    <div class="contenedor">
+        <mat-card>
+            <mat-grid-list [cols]="breakpoint" rowHeight="70px" (window:resize)="onResize($event)">
+                <mat-grid-tile>
+                    <h1>Registro</h1>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list [cols]="breakpoint" rowHeight="70px" (window:resize)="onResize($event)">
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Nombres</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="nombres">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="apellidos">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Cedula Identidad</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="ci">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Fecha Nacimiento</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="fechaNacimiento">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Ciudad</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="ciudad">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Teléfono</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="telefono">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field class="inputsStye">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="text" placeholder="" formControlName="email">
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-center example-button-row">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!parametroForm.valid"><mat-icon>done</mat-icon> Guardar</button>
+                <button mat-raised-button color="primary"><mat-icon>clear</mat-icon> Cancelar</button>
+            </div>
+        </div>
+    </div>
+</form>

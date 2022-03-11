@@ -1,0 +1,11 @@
+.table-container{
+    max-width: 100%;
+    overflow: auto;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 1200px;
+}

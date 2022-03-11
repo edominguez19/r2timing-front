@@ -1,0 +1,28 @@
+.inputsStye{
+    width: 60%;
+}
+
+.inputsStyePanel{
+    width: 90%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 90%;
+}
+
+.example-card{
+    width: 90%;
+    text-align: center;
+}
+
+.resposive{
+    width: 80px;
+    height: auto;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
